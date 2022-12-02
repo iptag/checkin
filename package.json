@@ -1,0 +1,30 @@
+{
+    "dependencies": {
+        "@iarna/toml": "~2.2.5",
+        "axios": "^0.27.0",
+        "cron-parser": "^4.3.0",
+        "crypto-js": "^4.1.1",
+        "node-fetch": "~2.6.7",
+        "js-md5": "^0.7.3",
+        "qs": "^6.11.0",
+        "got": "<=11.8.6"
+    },
+    "name": "checkinpanel",
+    "description": "<div align=\"center\">\r <h1 align=\"center\">定时面板上的签到盒</h1>",
+    "version": "4.0.0",
+    "main": "checkinjs.js",
+    "devDependencies": {},
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Oreomeow/checkinpanel.git"
+    },
+    "author": "Oreomeow",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Oreomeow/checkinpanel/issues"
+    },
+    "homepage": "https://github.com/Oreomeow/checkinpanel#readme"
+}
