@@ -50,6 +50,7 @@ class Pojie:
             msg = f"账号 {i} 签到状态: {sign_msg}"
             msg_all += msg + "\n\n"
             i += 1
+        print(msg_all)
         return msg_all
 
 
