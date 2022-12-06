@@ -32,7 +32,7 @@ async function wps() {
                 for (var i=0;i<15;i++){
                     await get_Yzm();
                     result = await get_Norsign().then(data => data);
-                    if (result == "ok") break;
+                    if (result.code == "ok" || result.flag) break;
                     await sleep(Math.floor((Math.random() * 3000) + 5000));
                 }
                 await get_Norstatus();
@@ -102,12 +102,19 @@ function get_Yzm() {
 function get_Norsign() {
     url = `https://vip.wps.cn/sign/v2`
     body = {"platform": "8","captcha_pos": "137, 36","img_witdh": "275.164","img_height": "69.184"}
+    result = {}
     return new Promise(resolve => {
        fetch(url, {method: 'POST', headers: header, body: JSON.stringify(body)}).then(response => {
           return response.json()
         }).then(body => {
           console.log(body)
-          resolve(body.result)
+          result.code = body.result
+          if (body.msg.includes("\u5df2\u5b8c\u6210\u7b7e\u5230")) {
+              result.flag = true
+          } else {
+              result.flag = false
+          }
+          resolve(result)
         }).catch(e => {
           const error = '普通签到出现错误，请检查⚠️';
           console.log(error + '\n' + e);
