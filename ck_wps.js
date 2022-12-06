@@ -32,10 +32,8 @@ async function wps() {
                 for (var i=0;i<15;i++){
                     await get_Yzm();
                     result = await get_Norsign().then(data => data);
+                    if (result == "ok") break;
                     await sleep(Math.floor((Math.random() * 3000) + 5000));
-                    if (result == 'ok') {
-                         break;
-                    }
                 }
                 await get_Norstatus();
             }
@@ -44,7 +42,7 @@ async function wps() {
                 await get_Cpatcha(usrinfo.id);
                 result = await get_Vipsign().then(data => data);
                 await sleep(Math.floor((Math.random() * 3000) + 5000));
-                if (result == 'ok') {
+                if (result == "ok") {
                      break;
                 }
             }
@@ -106,7 +104,7 @@ function get_Norsign() {
     body = {"platform": "8","captcha_pos": "137, 36","img_witdh": "275.164","img_height": "69.184"}
     return new Promise(resolve => {
        fetch(url, {method: 'POST', headers: header, body: JSON.stringify(body)}).then(response => {
-          return response.text()
+          return response.json()
         }).then(body => {
           console.log(body)
           resolve(body.result)
