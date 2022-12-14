@@ -16,7 +16,7 @@ var info = '';
 header ={
     "regionCode": 'CN',
     "languageCode": 'sc',
-    "clientVersion": '9.45.1',
+    "clientVersion": '9.47.0',
     "carrier": "",
     "model": 'iPhone 12',
     "screenSize": '1170x2532',
