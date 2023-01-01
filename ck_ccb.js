@@ -68,7 +68,7 @@ function get_Param(t,b) {
         }).then(function(response) {
           return response.json()
         }).then(function(body) {
-          tmp = "https://fission-events.ccbft.com/a/31/AZGlA939?ccbParamSJ=" + encodeURIComponent(body["data"]["ENCRYPTED_MSG"]) + `&cityid=${t}&CITYID=${t}&userCityId=${b}&USERCITYID=${b}`
+          tmp = "https://fission-events.ccbft.com/a/31/LmqJbkZ6?ccbParamSJ=" + encodeURIComponent(body["data"]["ENCRYPTED_MSG"]) + `&cityid=${t}&CITYID=${t}&userCityId=${b}&USERCITYID=${b}`
           console.log("ParamSJ链接为：\n" + tmp + "\n\n")
           resolve(tmp)
         }).catch(function(e) {
@@ -106,7 +106,7 @@ function get_Cookie(t) {
 
 //查看是否已签过到
 function get_Info() {
-    url = "https://fission-events.ccbft.com/activity/autographnew/info/31/AZGlA939"
+    url = "https://fission-events.ccbft.com/activity/autographnew/info/31/LmqJbkZ6"
     return new Promise(resolve => {
        fetch(url, {
           method: 'GET',
@@ -130,7 +130,7 @@ function get_Info() {
 
 //签到
 function sign() {
-    url = "https://fission-events.ccbft.com/activity/autographnew/register/31/AZGlA939"
+    url = "https://fission-events.ccbft.com/activity/autographnew/register/31/LmqJbkZ6"
     return new Promise(resolve => {
        fetch(url, {
           method: 'POST',
