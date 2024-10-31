@@ -507,11 +507,12 @@ class RUN:
         return one_msg
 
 if __name__ == '__main__':
+    data = get_data()
     tokens = data.get("SFEXPRESS", [])
     if not tokens:
         print(f'未检测到顺丰签到的cookie')
     else:
-        for index, token in enumerate(tokens.get("cookie")):
-            res = RUN(token, index).main()
+        for index, token in enumerate(tokens):
+            res = RUN(token.get("cookie"), index).main()
             time.sleep(random.uniform(5, 8))
             send("顺丰签到", res)      
