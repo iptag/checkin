@@ -1,4 +1,6 @@
 """
+# -*- coding: utf-8 -*-
+cron: 8 8 * * *
 打开小程序或APP-我的-积分, 抓包以下几种url开头的链接（随便一个）,把整个url放到变量对应的cookie里
 https://mcs-mimp-web.sf-express.com/mcs-mimp/share/weChat/activityRedirect
 https://mcs-mimp-web.sf-express.com/mcs-mimp/share/app/activityRedirect
