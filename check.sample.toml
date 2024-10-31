@@ -152,11 +152,10 @@ token = ""
 Authorization = 'Basic xxxx注意有空格'
 phoneNumber = "13xx"
 
-# 顺丰【IOS】
+# 顺丰
 [[SFEXPRESS]]
-jsbundle = "d25cxx"
-deviceId = "F91EE4-xxx"
-memNo = "00000000000000000000xxxx"
+cookie = "https://mcs-mimp-web.sf-express.com/mcs-mimp/share/app/activityRedirect?sign=xxxx&source=SFAPP&bizCode=xxxx"
+# 或者 cookie = "https://mcs-mimp-web.sf-express.com/mcs-mimp/share/weChat/activityRedirect?source=CX&unionId=xxx&openId=xxx&memId=xxxx&memNo=xxxx&mobile=xxx&mediaCode=wxapp&bizCode=xxxx"
 
 # WPS【WEB】
 # https://www.kdocs.cn cookie
